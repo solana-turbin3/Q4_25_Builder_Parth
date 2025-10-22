@@ -6,12 +6,6 @@ use mpl_core::{
 
 use crate::{error::MPLXCoreError, state::CollectionAuthority};
 
-#[derive(AnchorSerialize, AnchorDeserialize)]
-pub struct UpdateNftArgs {
-    pub new_name: Option<String>,
-    pub new_uri: Option<String>,
-}
-
 #[derive(Accounts)]
 pub struct UpdateNft<'info> {
     #[account(mut)]
@@ -43,7 +37,7 @@ pub struct UpdateNft<'info> {
 }
 
 impl<'info> UpdateNft<'info> {
-    pub fn update_nft(&mut self, args: UpdateNftArgs) -> Result<()> {
+    pub fn update_nft(&mut self, new_name: String) -> Result<()> {
         let signer_seeds: &[&[&[u8]]] = &[&[
             b"collection_authority",
             &self.collection.key().to_bytes(),
@@ -55,9 +49,8 @@ impl<'info> UpdateNft<'info> {
             .collection(Some(&self.collection.to_account_info()))
             .payer(&self.authority.to_account_info())
             .authority(Some(&self.collection_authority.to_account_info()))
-            .system_program(Some(&self.system_program.to_account_info()))
-            .new_name(args.new_name.unwrap_or_default())
-            .new_uri(args.new_uri.unwrap_or_default())
+            .system_program(&self.system_program.to_account_info())
+            .new_name(new_name)
             .invoke_signed(signer_seeds)?;
 
         Ok(())
