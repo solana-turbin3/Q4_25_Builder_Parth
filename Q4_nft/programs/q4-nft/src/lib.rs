@@ -22,15 +22,15 @@ pub fn whitelist_creator(ctx: Context<WhitelistCreator>) -> Result<()> {
         ctx.accounts.mint_nft()
     }
 
-    // pub fn freeze_nft(ctx: Context<FreezeNft>) -> Result<()> {
-    //     ctx.accounts.freeze_nft()
-    // }
+    pub fn freeze_nft(ctx: Context<FreezeNft>) -> Result<()> {
+        ctx.accounts.freeze_nft()
+    }
 
-    // pub fn thaw_nft(ctx: Context<ThawNft>) -> Result<()> {
-    //     ctx.accounts.thaw_nft()
-    // }
+    pub fn thaw_nft(ctx: Context<ThawNft>) -> Result<()> {
+        ctx.accounts.thaw_nft()
+    }
 
-    // pub fn thaw_nft(ctx: Context<UpdateNft>, new_name: String) -> Result<()> {
-    //     ctx.accounts.update_nft(new_name)
-    // }
+    pub fn thaw_nft(ctx: Context<UpdateNft>, new_name: String) -> Result<()> {
+        ctx.accounts.update_nft(new_name)
+    }
 }
