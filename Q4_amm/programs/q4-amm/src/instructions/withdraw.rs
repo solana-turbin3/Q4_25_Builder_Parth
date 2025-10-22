@@ -73,15 +73,14 @@ impl<'info> Withdraw<'info> {
         require!(self.mint_lp.supply > 0, AmmError::NoLiquidityInPool);
 
         // Calculate withdrawal amounts using constant product curve
-        let Ok(amounts) = ConstantProduct::xy_withdraw_amounts_from_l(
+        let amounts = ConstantProduct::xy_withdraw_amounts_from_l(
             self.vault_x.amount,
             self.vault_y.amount,
             self.mint_lp.supply,
             amount,
             6,
-        ) else {
-            return Err(todo!());
-        };
+        )
+        .map_err(AmmError::from)?;
 
         let x = amounts.x;
         let y = amounts.y;
