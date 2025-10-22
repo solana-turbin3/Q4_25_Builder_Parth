@@ -1,0 +1,14 @@
+[2025-10-22--13-43-39 INFO actix_server::builder] starting 5 workers
+[2025-10-22--13-43-39 INFO actix_server::server] Tokio runtime found; starting in existing Tokio runtime
+[2025-10-22--13-43-39 INFO actix_server::server] starting service: "actix-web-service-127.0.0.1:18488", workers: 5, listening on: 127.0.0.1:18488
+[2025-10-22--13-43-39 INFO parity_ws] Listening for new connections on 127.0.0.1:8900.
+[2025-10-22--13-43-46 INFO txtx::svm::deploy_program] [Recovery Instructions] - An ephemeral authority account will be created and funded to write to the buffer account.
+[2025-10-22--13-43-46 INFO txtx::svm::deploy_program] [Recovery Instructions] - Please save the following information in case the deployment fails and the account needs to be recovered:
+[2025-10-22--13-43-46 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority public key: DBH8AY5cQemwzmhHNTuEewBBn6AxSPAqN2KTc3jrcbzW
+[2025-10-22--13-43-46 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority secret key: [141, 241, 171, 54, 201, 194, 115, 245, 169, 26, 26, 207, 206, 30, 183, 148, 9, 104, 137, 51, 145, 145, 227, 74, 132, 97, 37, 107, 217, 220, 165, 106, 180, 238, 72, 57, 240, 27, 35, 40, 206, 165, 26, 243, 199, 131, 215, 46, 38, 83, 110, 17, 189, 231, 14, 164, 247, 56, 116, 209, 201, 207, 1, 151]
+[2025-10-22--13-43-46 INFO txtx::svm::deploy_program] Account Created - Ephemeral authority account created and funded to write to buffer
+[2025-10-22--13-43-46 INFO txtx::svm::deploy_program] [Recovery Instructions] - Creating program buffer account at pubkey FX5otjj2fCErnDq1o2pPRYrusMfEK4cqfWmBQky8sRQr
+[2025-10-22--13-43-47 INFO txtx::svm::deploy_program] Account Created - Program buffer account created
+[2025-10-22--13-43-51 INFO txtx::svm::deploy_program] Program Created - Program 64dwDBXenrc7rKLJcE1qfswQSf1cimYoLigJURKvQCEG has been deployed
+[2025-10-22--13-43-52 INFO txtx::svm::deploy_program] Complete - Ephemeral authority account closed and leftover funds returned to payer
+[2025-10-22--13-45-29 INFO parity_ws::io] Accepted a new tcp connection from 127.0.0.1:33404.
