@@ -35,16 +35,16 @@ pub mod nft_staking {
         ctx.accounts.mint_nft()
     }
 
-    // pub fn stake(ctx: Context<Stake>) -> Result<()> {
-    //     ctx.accounts.stake(&ctx.bumps)
-    // }
+    pub fn stake(ctx: Context<Stake>) -> Result<()> {
+        ctx.accounts.stake(&ctx.bumps)
+    }
 
-    // pub fn unstake(ctx: Context<Unstake>) -> Result<()> {
-    //     ctx.accounts.unstake()
-    // }
+    pub fn unstake(ctx: Context<Unstake>) -> Result<()> {
+        ctx.accounts.unstake()
+    }
 
-    // pub fn claim(ctx: Context<Claim>) -> Result<()> {
-    //     ctx.accounts.claim()
-    // }
+    pub fn claim(ctx: Context<Claim>) -> Result<()> {
+        ctx.accounts.claim()
+    }
 }
 
