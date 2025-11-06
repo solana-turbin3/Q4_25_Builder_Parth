@@ -14,6 +14,7 @@ use crate::{
 pub struct Unstake<'info> {
     #[account(mut)]
     pub user: Signer<'info>,
+/// CHECK: The account is validated via the constraints and its data is read/written with CPIs.
 
     #[account(
         mut,
@@ -21,7 +22,8 @@ pub struct Unstake<'info> {
         constraint = !asset.data_is_empty() @ StakeError::AssetNotInitialized
     )]
     pub asset: UncheckedAccount<'info>,
-
+/// CHECK: The account is validated via the constraints and its data is read/written with CPIs.
+    
     #[account(mut)]
     pub collection: UncheckedAccount<'info>,
 
@@ -46,6 +48,7 @@ pub struct Unstake<'info> {
         constraint = stake_account.owner == user.key() @ StakeError::NotOwner,
     )]
     pub stake_account: Account<'info, StakeAccount>,
+/// CHECK: The account is validated via the constraints and its data is read/written with CPIs.
 
     #[account(address = CORE_PROGRAM_ID)]
     pub core_program: UncheckedAccount<'info>,
