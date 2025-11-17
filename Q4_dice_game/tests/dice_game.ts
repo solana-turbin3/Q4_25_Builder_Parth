@@ -210,7 +210,7 @@ describe("dice_game", () => {
       console.log(`Roll result: ${rollResult}, Target: under ${roll}`);
 
       if (rollResult < roll) {
-        console.log("Player WON! 🎉");
+        console.log("Player WON! ");
         const multiplier = (100 * 10000) / roll;
         const expectedPayout = Math.floor(
           (amount.toNumber() * multiplier) / 10000
@@ -222,7 +222,7 @@ describe("dice_game", () => {
         console.log(`Actual gain: ${actualGain / LAMPORTS_PER_SOL} SOL`);
         expect(actualGain).to.be.greaterThan(0);
       } else {
-        console.log("Player lost 😢");
+        console.log("Player lost ");
         expect(playerBalanceAfter).to.be.lessThanOrEqual(playerBalanceBefore);
       }
     });
